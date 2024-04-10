@@ -1,0 +1,86 @@
+/*says the paddinng and border are included in the total width and height of element*/
+* {
+	box-sizing: border-box;
+}
+/*to prevent from float-out columns of a rows since all rows are floating left*/
+.row::after{
+	content: "";
+	clear: both;
+	display: table;
+}
+[class*="col-"]{
+	float: left;
+	/*padding: 15px;*/
+	/*border: 1px solid;*/
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+html {
+  font-family: "Lucida Sans", sans-serif;
+}
+body{
+	background-color: #1f1b1a;
+}
+.col-8{
+	background-color: #315e73;
+	margin-top: 70px;
+	padding-bottom: 30px;
+}
+.col-8 h1, p{
+	text-align: center;
+}
+.col-10 input{
+	height: 33px;
+	width: 650px;
+	margin-right: 10px;
+}
+h1{
+	color: white;
+}
+#insert{
+	background-color: #471111;
+	color: white;
+	height: 33px;
+	width: 80px;
+	text-align: center;
+	border: none;
+}
+input[type="text"]{
+
+}
+#clear{
+	background-color: #471111;
+	color: white;
+	height: 33px;
+	width: 70px;
+	text-align: center;
+	border: none;
+}
+.label{
+	border: 2px solid;
+}
+
+
+/*media query for screen-size lesser than 500px*/
+@media (max-width: 500px) {
+  .main{
+    margin: auto;
+    width: 100%;
+  }
+  input[type="text"]{
+    width: 80%;
+  }
+  button{
+    width: 10%;
+  }
+}
